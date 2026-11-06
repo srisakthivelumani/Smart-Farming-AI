@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* ── Base theme ─────────────────────────────────────────────────────────────── */
+:root {
+  --color-primary:   #166534; /* green-800 */
+  --color-secondary: #16a34a; /* green-600 */
+  --color-accent:    #4ade80; /* green-400 */
+  --color-warning:   #d97706; /* amber-600 */
+  --color-error:     #dc2626; /* red-600 */
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+  background-color: #f0fdf4; /* green-50 */
+  color: #1f2328;
+}
+
+/* ── Typography helpers ───────────────────────────────────────────────────────*/
+.text-farmer-heading {
+  @apply text-2xl font-bold text-green-800 tracking-tight;
+}
+
+/* ── Data source badges ───────────────────────────────────────────────────────
+   LIVE  = verified real-time API data
+   RAG   = retrieved from agricultural documents
+   AI    = IBM Granite generated text
+   N/A   = service unavailable — no fabricated data
+*/
+.badge-live  { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-green-100 text-green-800 border border-green-300; }
+.badge-rag   { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-blue-100  text-blue-800  border border-blue-300; }
+.badge-ai    { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-purple-100 text-purple-800 border border-purple-300; }
+.badge-na    { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-red-100   text-red-800   border border-red-300; }

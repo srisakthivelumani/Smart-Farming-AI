@@ -1,0 +1,90 @@
+﻿# ==============================================================================
+# Smart Farming AI — .gitignore
+# Covers: Python, FastAPI, React, Vite, Node.js
+# ==============================================================================
+
+# ── SECURITY: NEVER commit these ──────────────────────────────────────────────
+.env
+**/.env
+**/*.env
+!**/.env.example
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+langflow-venv/
+
+# ── Pytest / Testing ──────────────────────────────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.log
+test_errors.log
+test_results.log
+langflow_install.log
+langflow_install_err.log
+langflow_install_out.log
+
+# ── FAISS index and uploaded documents ────────────────────────────────────────
+# (index is auto-rebuilt from seed docs at startup)
+backend/app/data/faiss_index/
+backend/data/faiss_index/
+backend/data/documents/
+# Keep the seed docs (knowledge base PDFs/TXTs) and the knowledge_base folder
+!backend/app/data/knowledge_base/
+!backend/app/data/knowledge_base/**
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+**/node_modules/
+dist/
+dist-ssr/
+frontend/dist/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Vite ──────────────────────────────────────────────────────────────────────
+frontend/node_modules/.vite/
+frontend/node_modules/.vite-temp/
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Bob AI assistant (IDE tool cache) ─────────────────────────────────────────
+.bob/
+
+# ── Misc generated files ──────────────────────────────────────────────────────
+*.class
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
